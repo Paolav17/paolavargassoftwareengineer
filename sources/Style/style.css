@@ -15,7 +15,7 @@
     box-sizing: border-box;    
 }
 
-body {
+ body {
     background-color: var(--main-body-color);
     background-image: radial-gradient(circle, var(--main-second-color) 10%, transparent 50%);
     background-size: 20px 20px;
@@ -211,5 +211,44 @@ body {
 }
 
 .footer__text {
+}
+
+
+@media (max-width: 991px) {
+    .main{
+        padding: 1em 2em;
+    }
     
+    .intro__image-img{
+        width: 200px;
+    }
+    .intro__title{
+        width: 100%;
+        margin: 0;
+        padding: 0 0 1em 0.6em;
+    }
+    .intro__content,
+    .about__content,
+    .projects__content,
+    .contact__content {
+        overflow: hidden;
+        width: 100%;
+        
+    }
+    .intro__content,
+    .projects__content, .projects__list{
+        flex-direction: column;
+        padding: 5px;
+        align-items: center;
+    }
+    .intro__title{
+        align-self: center;
+    }
+    .projects{
+        height: 50em  
+    }
+    .contact__form {
+        display: grid;
+        grid-template-columns: 5% 90% 5%;
+    }
 }

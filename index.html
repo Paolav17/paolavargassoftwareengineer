@@ -8,43 +8,86 @@
 </head>
 <body class="page">
     <header class="header">
-            <nav class="header__nav">
+            <!-- <nav class="header__nav">
                 <ul class="header__nav-list">
                     <li class="header__nav-item"><a href="#intro" class="header__link">Hello</a></li>
                     <li class="header__nav-item"><a href="#about" class="header__link">About me</a></li>
                     <li class="header__nav-item"><a href="#projects" class="header__link">Projects</a></li>
                     <li class="header__nav-item"><a href="#contact" class="header__link">Contact me</a></li>
                 </ul>
-            </nav>
+            </nav> -->
     </header>
     <main class="main">
         <section class="intro" id="intro">
             <div class="intro__content">
                 <div class="intro__image">
-                    <img src="sources/img/profile_pic.png" alt="profile Paola Vargas" class="intro__image-img">
+                  
+                    <img src="/sources/img/profile_pic_paolav.jpg" alt="profile Paola Vargas" class="intro__image-img">
                 </div>
                 <div class="intro__info">
-                    <h2 class="intro__greeting">Hi! My name is Paola Vargas, I'm</h2>
+                    <h2 class="intro__greeting">Hi! My name is <b class="intro__greeting-name">Paola Vargas</b>, I'm</h2>
                     <h1 class="intro__title">Software Engineer</h1>
-                    <p class="intro__description">Bachelor's degree and honors in Data Analysis. Skilled in Business Intelligence, web development, and data analysis with advanced expertise in SQL, Python, and Git</p>
+                    <h2 class="intro__specialization">Front end - Data visualization</h2>
+                    <p class="intro__description">Welcome to my portfolio! a Software Engineer and additional studies in Data Analysis with honors, specializing in frontend development and data visualization. I create interactive user interfaces using React, transforming complex data into clear visual insights.</p>
+                    <a href="#about" class="intro__buttom">More about me</a>
                 </div>
             </div>
         </section>
         
         <section class="about" id="about">
             <div class="about__content">
+                <div class="about__content__aside">
+                <aside class="about__aside">
+                    <img src="/sources/img/profile_pic_paolav.jpg" alt="profile Paola Vargas" class="about__aside-img">
+                    <ul class="about__nav-list">
+                        <li class="about-item"><a href="#intro" class="about__link">Hello</a></li>
+                        <li class="about-item"><a href="#about" class="about__link">About me</a></li>
+                        <li class="about-item"><a href="#projects" class="about__link">Projects</a></li>
+                        <li class="about-item"><a href="#contact" class="about__link">Contact me</a></li>
+                    </ul>
+                </aside>
+                </div>
+                <div class="about__information">
                 <h2 class="about__title">About me</h2>
-                <p class="about__description"> Bachelor's in Software Engineering and an honors certification in Data Analysis from Le Wagon. I specialize in Business Intelligence, web development (JavaScript, HTML, CSS), and data analysis, with advanced skills in SQL, Python, Excel, and Git. My experience includes leading data-driven projects, generating innovative ideas, and fostering collaborative teamwork. I excel in leadership, team development, and effective communication, positioning me for dynamic roles in data analysis and web development. I’m eager to explore new opportunities and collaborate on challenging projects.</p>
+                <p class="about__description"> Software Engineer and additional studies in Data Analysis with honors, specializing in frontend development and data visualization. Proficient in creating interactive, responsive user interfaces using React, along with modern web technologies like HTML, CSS, and JavaScript. Strong background in Business Intelligence and data analytics. Advanced skills in SQL, Python, and version control with Git. Passionate about transforming complex data into clear visualizations that enhance understanding and decision-making.</p>
+                <div class="about__skills">
+                    <h2 class="about__skills_title">Programming Skills</h2>
+                        <div class="about__skills-grid">
+                                <img src="/sources/img/htmllogo.png" alt="html image" class="about__skills__img" title="HTML">
+                                <img src="/sources/img/csslogo.png" alt="css image" class="about__skills__img" title="CSS">
+                                <img src="/sources/img/JavaScriptlogo.png" alt="javascript image" class="about__skills__img" title="Java Srcipt">
+                                <img src="/sources/img/pythonlogo.png" alt="python image" class="about__skills__img" title="Python">
+                                <img src="/sources/img/Reactlogo.png" alt="react image" class="about__skills__img" title="React">
+                                <img src="/sources/img/MySQLlogo.png" alt="mysql image" class="about__skills__img" title="My SQL">
+                                <img src="/sources/img/PowerBIlogo.png" alt="powerBI image" class="about__skills__img" title="Power BI">
+                                <img src="/sources/img/Lookerstudiologo.png" alt="Lookerstudio image" class="about__skills__img" title="Looker Studio">
+
+                        </div>
+                    </div>
+                </div>
             </div>  
         </section>
 
         <section class="projects" id="projects">
             <div class="projects__content">
-                <h2 class="projects__title">Projects</h2>
-                <div class="projects__list">
-                    <p class="projects__item">Proyecto 1</p>
-                    <p class="projects__item">Proyecto 1</p>
-                    <p class="projects__item">Proyecto 1</p>
+                <div class="projects__content__aside">
+                    <aside class="projects__aside">
+                        <img src="/sources/img/profile_pic_paolav.jpg" alt="profile Paola Vargas" class="projects__aside-img">
+                        <ul class="projects__nav-list">
+                            <li class="projects-item"><a href="#intro" class="projects__link">Hello</a></li>
+                            <li class="projects-item"><a href="#about" class="projects__link">About me</a></li>
+                            <li class="projects-item"><a href="#projects" class="projects__link">Projects</a></li>
+                            <li class="projects-item"><a href="#contact" class="projects__link">Contact me</a></li>
+                        </ul>
+                    </aside>
+                </div>
+                <div class="projects__information">
+                    <h2 class="projects__title">Projects</h2>
+                        <div class="projects__list">
+                            <p class="projects__item">Proyecto 1</p>
+                            <p class="projects__item">Proyecto 1 </p>
+                            <p class="projects__item">Proyecto 1 </p>
+                        </div>
                 </div>
             </div>
         </section>
@@ -52,27 +95,38 @@
         
         <section class="contact" id="contact">
             <div class="contact__content">
-                <h2 class="contact__heading">Contact me to generate amazing projects</h2>
-                <form action="" method="" enctype="" class="contact__form">
-                    <a href="https://drive.google.com/file/d/1D7h9V3Tr5nslWN8G4HR99G7YuNyuF2Q_/view?usp=sharing" class="contact__download">Download CV</a>
-                    <label for="name" class="contact__label contact__label--name">Your name:</label>
-                    <input type="text" placeholder="Name" id="name" class="contact__input contact__input--name"><br>
+                <div class="contact__content__aside">
+                    <aside class="contact__aside">
+                        <img src="/sources/img/profile_pic_paolav.jpg" alt="profile Paola Vargas" class="projects__aside-img">
+                        <ul class="contact__nav-list">
+                            <li class="contact-item"><a href="#intro" class="contact__link">Hello</a></li>
+                            <li class="contact-item"><a href="#about" class="contact__link">About me</a></li>
+                            <li class="contact-item"><a href="#projects" class="contact__link">Projects</a></li>
+                            <li class="contact-item"><a href="#contact" class="contact__link">Contact me</a></li>
+                        </ul>
+                    </aside>
+                </div>
+                <div class="contact__information">
+                    <h2 class="contact__heading">Contact me to generate amazing projects</h2>
+                    <form action="" method="" enctype="" class="contact__form">
+                        <label for="name" class="contact__label contact__label--name">Your name:</label>
+                        <input type="text" placeholder="Name" id="name" class="contact__input contact__input--name"><br>
+                      
+                        <label for="lastname" class="contact__label contact__label--lastname">Your lastname:</label>
+                        <input type="text" placeholder="Lastname" id="lastname" class="contact__input contact__input--lastname"><br>
 
-                    <label for="lastname" class="contact__label contact__label--lastname">Your lastname:</label>
-                    <input type="text" placeholder="Lastname" id="lastname" class="contact__input contact__input--lastname"><br>
+                        <label for="mail" class="contact__label contact__label--email">Your email:</label>
+                        <input type="email" placeholder="email" id="email" class="contact__input contact__input--email"><br>
 
-                    <label for="mail" class="contact__label contact__label--email">Your email:</label>
-                    <input type="email" placeholder="email" id="email" class="contact__input contact__input--email"><br>
+                        <label for="phone" class="contact__label contact__label--phone">Contact Phone:</label>
+                        <input type="number" placeholder="Phone" id="phone" class="contact__input contact__input--phone"><br>
 
-                    <label for="phone" class="contact__label contact__label--phone">Contact Phone:</label>
-                    <input type="number" placeholder="Phone" id="phone" class="contact__input contact__input--phone"><br>
-
-                    <label for="message" class="contact__label contact__label--message">Your message:</label>
-                    <textarea id="message" class="contact__input contact__input--message" maxlength="250"></textarea>
-                    <input type="submit" name="send" id="send" value="Send" class="contact__submit">
-                    
-                </form>
-                	
+                        <label for="message" class="contact__label contact__label--message">Your message:</label>
+                        <textarea id="message" class="contact__input contact__input--message" maxlength="250"></textarea>
+                        <input type="submit" name="send" id="send" value="Send" class="contact__submit">
+                        <a href="https://drive.google.com/file/d/1D7h9V3Tr5nslWN8G4HR99G7YuNyuF2Q_/view?usp=sharing" class="contact__download">Download CV</a>
+                    </form>
+                </div>
             </div>
         </section>
     </main>

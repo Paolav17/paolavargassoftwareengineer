@@ -14,7 +14,7 @@
 }
 
  body {
-    background-image: url('..sources/img/background.jpg');
+    background-image: url('.sources/img/background.jpg');
     font-family: var(--font-family);
     font-weight: 300;
     font-style: normal;

@@ -21,14 +21,12 @@
     font-weight: 300;
     font-style: normal;
     overflow: hidden;
+    padding: 0.2em 10em 1em 10em;
 }
 nav{
     display: none;
 }
 
-.main {
-    padding: 0.2em 10em 1em 10em;
-}
 
 .intro,
 .about,

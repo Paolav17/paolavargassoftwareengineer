@@ -14,19 +14,19 @@
 }
 
  body {
-    background-image: url('../img/background.jpg');
- }
- .main
+    background-image: url(/sources/img/background.jpg);
     font-family: var(--font-family);
     font-weight: 300;
     font-style: normal;
     overflow: hidden;
-    padding: 0.2em 10em 1em 10em;
 }
 nav{
     display: none;
 }
 
+.main {
+    padding: 0.2em 10em 1em 10em;
+}
 
 .intro,
 .about,
@@ -381,22 +381,26 @@ nav{
     }
     .header__nav-list{
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         width: 100%;
+        max-width: fit-content;
         position: fixed;
+        padding: 0;
         top: 0;
+        height: 3em;
         background: linear-gradient(to top,var(--main-body-color ),var(--main-thirt-color ));
     }
     
     .header__nav a{
         text-decoration: none;
+        margin: 100%;
     
     }
     .header__nav li{
         list-style: none;
     }
     .header__link{
-        font-size: 1.2em;
+        font-size: 2em;
     }
     .about__aside
     ,.projects__aside

@@ -86,7 +86,7 @@ nav{
     flex-direction: column;
     align-items: center;
     margin: auto;
-    padding: 2em;
+    padding: 2em;    
 }
 
 .intro__title {
@@ -492,4 +492,71 @@ nav{
     ,.contact__submit{
         margin: 1em;
     }
+
 }
+@media (min-width: 600px) and (max-width: 1199px){
+    body{
+        /* overflow:scroll */
+    }
+    .main {
+        padding: 0.2em 5vw 1em 5vw;
+    }
+
+    .intro__content,
+    .about__content,
+    .projects__content,
+    .contact__content {
+        width:  100%;
+        align-items: center;
+        box-shadow: 10px 10px 20px #282727;
+        box-sizing: border-box;
+    }
+    .intro,
+    .about,
+    .projects {
+        display: flex;
+        margin: 0;
+        width: auto;
+        align-items: center;
+        height:100vh;
+    }
+    .contact__form {
+        display: grid;
+        grid-template-columns: 10% 30% 30% 5%;
+    }
+    .intro__buttom{
+        display: flex;
+        flex-direction:row;
+        padding: 0;
+    }
+    .contact__download
+    , .contact__submit
+    ,.intro__link{
+        height: auto;
+    }
+    .intro__logo_github
+    ,.intro__logo_linkedin{
+        height: 10%;
+    }
+    .intro__info{
+        padding: 1%;
+    }
+    .intro__image-img {
+        width: 100%;
+        display: block;
+    }
+    .about__skills-grid{
+        display: flex;                
+        flex-wrap: wrap;              
+        justify-content: center;      
+        gap: 10px;  
+        width: auto;
+    }
+    .about__skills__img {
+        width: 50px; 
+        height: 50px;
+        margin: 0;
+    }
+}
+
+

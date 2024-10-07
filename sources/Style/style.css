@@ -381,26 +381,26 @@ nav{
     }
     .header__nav-list{
         display: flex;
-        justify-content: center;
+        justify-content:center;
+        align-content: center;
         width: 100%;
-        max-width: fit-content;
         position: fixed;
-        padding: 0;
         top: 0;
-        height: 3em;
         background: linear-gradient(to top,var(--main-body-color ),var(--main-thirt-color ));
     }
     
     .header__nav a{
         text-decoration: none;
         margin: 100%;
+        align-items: center;
     
     }
     .header__nav li{
         list-style: none;
+        margin: 0 9% 0 4%;
     }
     .header__link{
-        font-size: 2em;
+        font-size: 1.7em;
     }
     .about__aside
     ,.projects__aside
@@ -456,8 +456,17 @@ nav{
         padding: .05em;
     }
     .about__skills-grid{
-        display: flex;
-        flex-wrap: wrap;
+        display: flex;                
+        flex-wrap: wrap;              
+        justify-content: center;      
+        gap: 10px;  
+        width: auto;
+
+    }
+    .about__skills__img {
+        width: 50px; 
+        height: 50px;
+        margin: 2em;
     }
     .projects__list{
         flex-direction: column;

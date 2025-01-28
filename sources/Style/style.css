@@ -2,9 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Londrina+Shadow&display=swap');
 :root {
     --main-body-color: #f4b32e ;
-    --main-second-color: #969696 ;
+    --main-second-color: #f7f0f0 ;
     --main-thirt-color:rgba(244, 179, 46, .5);
     --font-family: "Poppins", sans-serif;
+    --heigth : 50em;
 }
 
 * {
@@ -14,28 +15,46 @@
 }
 
  body {
-    background-image: url(sources/img/background.jpg);
+    background-image: url(/sources/img/background.jpeg),linear-gradient(rgba(157, 200, 203, 0.5), rgba(210, 217, 146, 0.5));
+    background-blend-mode: overlay;
     font-family: var(--font-family);
     font-weight: 300;
     font-style: normal;
-    overflow: hidden;
+    /* overflow: hidden; */
+}
+ .projects, .contact{
+    display: none !important
 }
 nav{
     display: none;
 }
+.dynamic-site{
+    display: flex;
+
+}
 
 .main {
     padding: 0.2em 10em 1em 10em;
+    height: 97vh;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.dynamic-content {
+    height: 50vh;
+    display: flex;
+    align-items: center
 }
 
 .intro,
 .about,
 .projects {
+    width: 50%;
     display: flex;
     margin: 0 auto;
     width: auto;
-    align-items: center;
-    height:100vh;
+    flex-grow: 2;
 }
 
 .intro__content,
@@ -44,10 +63,8 @@ nav{
 .contact__content {
     background-color: var(--main-second-color);
     border-radius: 18px;
-    width: 100%;
     align-items: center;
     box-shadow: 10px 10px 20px #282727;
-    /* padding: 1em; */
 }
 
 .intro__content {
@@ -74,31 +91,25 @@ nav{
     text-align: center;
 }
 
-.intro__image-img {
-    width: 18em;
-    border: none;
-    border-radius: 18px  0  0 18px ;
-    display: block;
-}
+
 
 .intro__info {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: auto;
-    padding: 2em;    
+    padding: 5px;    
 }
 
 .intro__title {
     color: var(--main-body-color);
-    padding-bottom: 1em;
 }
 .intro__buttom{
     display: grid;
     grid-template-columns: 5em 5em 5em 5em 5em;
     grid-template-rows: 2em 2em 2em 1.5em; 
-    gap: 15px; 
-    padding: 20px;
+    gap: 5px; 
+    padding: 5px;
     align-items: center;
 }
 
@@ -117,9 +128,6 @@ nav{
 }
 
 
-.intro__link{
-    margin-top: 3em;
-}
 .intro__logo_github
 ,.intro__logo_linkedin{
     width: 4em;
@@ -152,31 +160,23 @@ nav{
     height: auto;
 }
 
-.about__aside
-,.projects__aside
-,.contact__aside{
+.about__aside{
     background-color: var(--main-body-color);
     border-radius: 18px  0  0 18px ;
-    width: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content: flex-start ;  
-     
-
+    justify-content: flex-start ; 
 }
 .about__aside-img
-,.projects__aside-img
-,.contact__aside-img
 {
-    width: 100%; 
+    width: 20vh;
     height: auto;
     border-radius: 10px 0  0 0 ;
 }
 
 .about__link
-,.projects__link
-,.contact__link{
+{
     text-decoration: none;
     text-align: center;
     font-weight: 800;  
@@ -185,10 +185,9 @@ nav{
 }
 
 .about__nav-list li
-,.projects__nav-list li
-,.contact__nav-list li{
+{
     list-style: none;
-    padding: 10%;
+    padding-bottom: 10%;
     white-space: nowrap;
     display: flex;
     align-items: center;
@@ -244,11 +243,7 @@ nav{
     width: 100%;
 }
 
-.about__aside-img
-,.projects__aside-img
-,.contact__aside-img{
-    width: 13em;
-}
+
 
 .projects__list {
     display: flex;
@@ -369,7 +364,7 @@ nav{
 }
 
 
-@media (max-width: 599px) {
+@media (min-width: 601px) and (max-width: 1024px) {
     body{
         overflow:scroll
     }
@@ -402,9 +397,7 @@ nav{
     .header__link{
         font-size: 1.7em;
     }
-    .about__aside
-    ,.projects__aside
-    ,.contact__aside{
+    .about__aside{
         display: none;
     }
 
@@ -426,13 +419,6 @@ nav{
         /* padding: 20px; */
         align-items: center;
         flex-direction:column;
-    }
-    .intro__image-img{
-        max-width: 200px;
-        width: 100%; 
-        height: auto;
-        border-radius: 10px;
-        margin: 0 20%;
     }
     .intro__description{
         width: 100%;
@@ -494,69 +480,6 @@ nav{
     }
 
 }
-@media (min-width: 600px) and (max-width: 1199px){
-    body{
-        /* overflow:scroll */
-    }
-    .main {
-        padding: 0.2em 5vw 1em 5vw;
-    }
 
-    .intro__content,
-    .about__content,
-    .projects__content,
-    .contact__content {
-        width:  100%;
-        align-items: center;
-        box-shadow: 10px 10px 20px #282727;
-        box-sizing: border-box;
-    }
-    .intro,
-    .about,
-    .projects {
-        display: flex;
-        margin: 0;
-        width: auto;
-        align-items: center;
-        height:100vh;
-    }
-    .contact__form {
-        display: grid;
-        grid-template-columns: 10% 30% 30% 5%;
-    }
-    .intro__buttom{
-        display: flex;
-        flex-direction:row;
-        padding: 0;
-    }
-    .contact__download
-    , .contact__submit
-    ,.intro__link{
-        height: auto;
-    }
-    .intro__logo_github
-    ,.intro__logo_linkedin{
-        height: 10%;
-    }
-    .intro__info{
-        padding: 1%;
-    }
-    .intro__image-img {
-        width: 100%;
-        display: block;
-    }
-    .about__skills-grid{
-        display: flex;                
-        flex-wrap: wrap;              
-        justify-content: center;      
-        gap: 10px;  
-        width: auto;
-    }
-    .about__skills__img {
-        width: 50px; 
-        height: 50px;
-        margin: 0;
-    }
-}
 
 

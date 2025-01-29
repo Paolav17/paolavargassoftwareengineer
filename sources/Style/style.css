@@ -15,7 +15,7 @@
 }
 
  body {
-    background-image: url(sources/img/background.jpeg),linear-gradient(rgba(157, 200, 203, 0.5), rgba(210, 217, 146, 0.5));
+    background-image: url('https://raw.githubusercontent.com/Paolav17/paolavargassoftwareengineer/main/sources/img/background.jpeg');
     background-blend-mode: overlay;
     font-family: var(--font-family);
     font-weight: 300;

@@ -5,7 +5,8 @@
     --main-second-color: #f7f0f0 ;
     --main-thirt-color:rgba(244, 179, 46, .5);
     --font-family: "Poppins", sans-serif;
-    --heigth : 50em;
+    --main-letter-color:#8c9198 ;
+
 }
 
 * {
@@ -22,8 +23,12 @@
     font-style: normal;
     /* overflow: hidden; */
 }
- .projects, .contact{
-    display: none !important
+.section {
+    display: none; /* Todas las secciones están ocultas */
+}
+
+.section.active {
+    display: block; /* Solo la sección activa será visible */
 }
 nav{
     display: none;
@@ -51,21 +56,22 @@ nav{
 
 
 .intro__content,
-.about__content,
 .projects__content,
 .contact__content {
     border-radius: 0 18px 18px 0 ;
     box-shadow: 10px 10px 20px #282727;
 }
 
-.intro__content {
+.intro__content 
+,.projects__content{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between ;
     align-items: center;
     align-self: center;
     background-color: #f7f0f0;
     padding: 4em;
+    height: 32em;
 }
 
 .intro__greeting-name{
@@ -82,8 +88,6 @@ nav{
     width: 100%;
     text-align: center;
 }
-
-
 
 .intro__info {
     display: flex;
@@ -129,25 +133,21 @@ nav{
 .intro__logo_github:hover
 ,.intro__logo_linkedin:hover{
     transform: scale(1.3);
-    filter: brightness(1.5);
-    filter: grayscale(100%);
+    filter: brightness(1.5) grayscale(100%);
 }
 
 .intro__greeting, 
-.about__title, 
 .projects__title, 
 .contact__heading,
 .header__link {
     color: #111;
     -webkit-text-stroke-width: 0.9px;
     text-align: center;
-    margin: 0 2em 0 2em;
+    margin: 0 1em 0 1em;
 }
-.about__content
-,.projects__content
+.projects__content
 ,.contact__content{
     display: flex;
-    flex-direction: row;
     height: auto;
 }
 
@@ -162,8 +162,8 @@ nav{
 .about__aside-img
 ,.image-media
 {
-    width: 40vh;
-    height: auto;
+    width: auto;
+    height: 20em;
     border-radius: 10px 0  0 0 ;
 }
 
@@ -191,73 +191,119 @@ nav{
 ,.contact__nav-list li:nth-child(4) .contact__link{
     color: #111;
 }
-.about__description {
-    padding: 1em;
+
+.frontend{
+    background-image: url(/sources/img/logofrontend.png);
+}
+.wordpress{
+    background-image: url(/sources/img/logowordpress.png);
+}
+.dataAnalyst{
+    background-image: url(/sources/img/logodataanalyst.png);
+}
+.python{
+    background-image: url(/sources/img/logopython.png);
 }
 
-.about__information
-,.projects__information{
+.projects__information{
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+
+}
+.container_slide{
+    width: 100%;
+    max-width: 90%;
+    margin-top: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    align-items: center;
+}
+.slide_list{
+    width: 100%;
+    height:  20em;
+    overflow: auto;
+    padding: 10px;
+    box-shadow: 0px 7px 46px 0px rgba(0, 0, 0, 0.3);
+    background-color: var(--main-body-color);
+    border-radius: 8px;
+    align-items: center;
+}
+
+.container_slide::-webkit-scrollbar {
+    display: none !important;
+}
+.item_skill{
+    width: 100%;
+    height: auto;
+    display: block;
+    align-items: center;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    transition: all 0.35s ease-in-out;
+    opacity: 0;
+    transform: scale(0.7);
+    padding: 2em;
+    background-size: cover;
+}
+
+.item_skill.item-hide{
+    opacity: 0;
+    transform: scale(0.7);
+}
+.item_skill.item-focus {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.item_skill.item-next {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.item_skill.item-next+.item_skill {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.item_skill:last-child {
+    margin-bottom: 155px;
+}
+
+.skill_name{
+    font-size: large;
+    font-weight: 700;
+}
+
+.skill_buttom{
+    border-radius: 10px;
+    padding: 6px;
+    margin: 10px;
+    border: none;
+    font-size: medium;
+    background-color: #E27D85
+}
+.skill_content{
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 30%;
-    width: auto ;
-}
-
-.about__skills{
-    background-color: #7e5e1d;
-    padding: 5%;
-    box-shadow: 10px 10px 20px #282727;
-}
-.about__skills-grid{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    transition: transform 0.1s ease;
-    width: 30em;
-    align-items: center;
-}
-.about__skills_title{
-    padding: 0 0 1em 0;
-    color: #FFFF;
-    text-align: center;
-}
-.about__skills__img{
-    width: 60px;
-    height: 60px;
-    transition: transform 0.3s ease, filter 0.3s ease;
-}
-.about__skills__img:hover{
-    transform: scale(1.3);
-    filter: brightness(1.5);
-}
-.projects__information{
-    height: 100%;
-    width: 100%;
-}
-
-
-
-.projects__list {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    border-radius: 10px;
-    border: 1px solid black;
-    background-color: var(--main-thirt-color);
-    width: 100%;
-
+    color: #111;
+    font-weight: 400;
+    background-color: rgba(255, 255, 255, 0.6); 
+    
 }
 
 
 .contact__form {
     display: grid;
-    grid-template-columns: 30% 30% 30% 10%;
+    grid-template-rows: repeat(3, 2em) 1.5em;
     grid-template-rows: repeat(9, auto); 
     gap: 15px; 
     padding: 20px;
-
 }
+
+
 
 .contact__input {
     border: 0.4px var(--main-letter-color) solid;
@@ -271,7 +317,8 @@ nav{
 }
 .contact__download
 , .contact__submit
-,.intro__link{
+,.intro__link
+{
     border: 0.4px var(--main-letter-color) solid;
     background-color: var(--main-body-color);
     border-radius: 10px;
@@ -400,7 +447,6 @@ nav{
     .image-media{
         display: flex;
         box-shadow: 10px 10px 30px var(--main-body-color);
-        width: 20vh;
     }
 
     .intro__content,
@@ -411,11 +457,11 @@ nav{
         width: 100%;
         display: block;
         margin: 1em 0;
+        height: auto;
     }
 
     
     .intro__content{
-        /* padding: 20px; */
         align-items: center;
         flex-direction:column;
     }

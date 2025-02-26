@@ -1,5 +1,5 @@
 document.addEventListener ('DOMContentLoaded',function(){
-    const links = document.querySelectorAll(".header__link, .about__link")
+    const links = document.querySelectorAll(".header__link, .about__link, .projects__link ,.contact__link")
     const sections = document.querySelectorAll(".section")
     function showSection(event){
         event.preventDefault();
@@ -81,7 +81,38 @@ document.addEventListener ('DOMContentLoaded',function(){
         });
 
     });
+    // icon
+    document.querySelectorAll(".ico_desc").forEach((icon) => {
+        icon.parentElement.addEventListener("mouseenter", () => {
+            icon.parentElement.style.animation = "bounce 0.5s";
+        });
+    
+        icon.parentElement.addEventListener("animationend", () => {
+            icon.parentElement.style.animation = "";
+        });
+    });
+    //sect color
+    const section = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll(".link");
 
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    navLinks.forEach((link) => link.style.color = "");
+                    if (entry.target.id === "intro") {
+                        document.querySelector(".about__link").style.color = "#111";
+                    } else if (entry.target.id === "projects") {
+                        document.querySelector(".projects__link").style.color = "#111";
+                    } else if (entry.target.id === "contact") {
+                        document.querySelector(".contact__link").style.color = "#111";
+                    }
+                }
+            });
+        },
+        { threshold: 0.2 } 
+    );
+    section.forEach((section) => observer.observe(section));
     
 } )
 

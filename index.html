@@ -32,13 +32,13 @@
                     <aside class="about__aside">
                         <img src="sources/img/profilePic.jpeg" alt="profile Paola Vargas" class="about__aside-img">
                         <ul class="about__nav-list">
-                            <li class="about-item"><a href="#intro" class="about__link">Hello</a></li>
-                            <li class="about-item"><a href="#projects" class="about__link">Projects</a></li>
-                            <li class="about-item"><a href="#contact" class="about__link">Contact me</a></li>
+                            <li class="about-item"><a href="#intro" class="about__link link">Hello</a></li>
+                            <li class="about-item"><a href="#projects" class="projects__link link">Projects</a></li>
+                            <li class="about-item"><a href="#contact" class="contact__link link">Contact me</a></li>
                         </ul>
                     </aside>
 
-            <section class="intro section" id="intro">
+            <section class="active section" id="intro">  
                 <div class="intro__content">
                     
                     <div class="intro__info">
@@ -48,7 +48,6 @@
                         <h2 class="intro__specialization">Front end - Data visualization</h2>
                         <p class="intro__description">Welcome to my portfolio! I'm a Software Engineer with additional studies in Data Analysis with honors, specializing in frontend development and data visualization. I create interactive user interfaces using React, transforming complex data into clear visual insights.</p>
                         <div class="intro__buttom">
-                            <a href="#about" class="intro__link">Projects</a>
                             <a href="https://www.linkedin.com/in/paola-vargas-mendez/" target="_blank">
                                 <img src="sources/img/linkedinIcon.png" alt="LinkedIn logo" class="intro__logo_linkedin">
                             </a>
@@ -102,24 +101,33 @@
                 <div class="contact__content">
                     <div class="contact__information">
                         <h2 class="contact__heading">Contact me to generate amazing projects</h2>
-                        <form action="" method="" enctype="" class="contact__form">
-                            <label for="name" class="contact__label contact__label--name">Your name:</label>
-                            <input type="text" placeholder="Name" id="name" class="contact__input contact__input--name"><br>
-                        
-                            <label for="lastname" class="contact__label contact__label--lastname">Your last name:</label>
-                            <input type="text" placeholder="Last name" id="lastname" class="contact__input contact__input--lastname"><br>
-
-                            <label for="mail" class="contact__label contact__label--email">Your email:</label>
-                            <input type="email" placeholder="email" id="email" class="contact__input contact__input--email"><br>
-
-                            <label for="phone" class="contact__label contact__label--phone">Contact Phone:</label>
-                            <input type="number" placeholder="Phone" id="phone" class="contact__input contact__input--phone"><br>
-
-                            <label for="message" class="contact__label contact__label--message">Your message:</label>
-                            <textarea id="message" class="contact__input contact__input--message" maxlength="250"></textarea>
-                            <input type="submit" name="send" id="send" value="Send" class="contact__submit">
-                            <a href="https://drive.google.com/file/d/1D7h9V3Tr5nslWN8G4HR99G7YuNyuF2Q_/view?usp=sharing" class="contact__download" target="_blank">Download CV</a>
-                        </form>
+                            <div class="contact__icon">
+                                <a href="https://www.linkedin.com/in/paola-vargas-mendez/" target="_blank" class="ico ico_one">
+                                    <img src="sources/img/iconLinked.png" alt="LinkedIn logo" class="contact_ico ">
+                                    <p class="ico_desc">Connect with me on LinkedIn</p>
+                                </a>
+                                <a href="https://github.com/Paolav17" target="_blank"class="ico ico_two">
+                                    <img src="sources/img/iconGit.png" alt="GitHub logo" class="contact_ico">
+                                    <p class="ico_desc">Check out my projects on GitHub</p>
+                                </a>
+                                <a href="https://drive.google.com/file/d/1D7h9V3Tr5nslWN8G4HR99G7YuNyuF2Q_/view?usp=sharing" target="_blank" class=" ico ico_three">
+                                    <img src="sources/img/iconCv.png" alt="GitHub logo" class="contact_ico">
+                                    <p class="ico_desc">Download my resume here</p>
+                                </a>    
+                                <a href="https://doodle.com/meeting/participate/id/en7pjZRa" target="_blank"class="ico ico_four">
+                                    <img src="sources/img/iconDate.png" alt="GitHub logo" class="contact_ico">
+                                    <p class="ico_desc">Schedule a meeting with me</p>
+                                </a>    
+                                <a href="mailto:paolavargasmendez.1@gmail.com" target="_blank"class="ico ico_five">
+                                    <img src="sources/img/iconMail.png" alt="GitHub logo" class="contact_ico" >
+                                    <p class="ico_desc">Send me an email</p>
+                                </a>    
+                                <a href="https://github.com/Paolav17" target="_blank"class="ico ico_six">
+                                    <img src="sources/img/iconWapp.png" alt="GitHub logo" class="contact_ico" >
+                                    <p class="ico_desc">Chat with me on WhatsApp</p>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>

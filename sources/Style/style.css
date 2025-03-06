@@ -23,12 +23,14 @@
     font-style: normal;
     /* overflow: hidden; */
 }
-.section {
-    display: none; /* Todas las secciones están ocultas */
+section{
+    width: 45em;
 }
-
+.section {
+    display: none; 
+}
 .section.active {
-    display: block; /* Solo la sección activa será visible */
+    display: block; 
 }
 nav{
     display: none;
@@ -173,7 +175,10 @@ nav{
     display: flex;
     align-items: center;
 }
-
+.about__nav-list li a:hover{
+    transform: scale(1.2);
+    color: #C3DAD2;
+}
 
 .intro__link
 {
@@ -275,13 +280,22 @@ nav{
     font-weight: 700;
 }
 
-.skill_buttom{
+.skill_buttom
+,.close_modal
+,.close_modalWordpress
+,.close_modalDataAnalyst
+,.close_modalPython{
     border-radius: 10px;
     padding: 6px;
     margin: 10px;
     border: none;
-    font-size: medium;
+    font-size: 1em;
     background-color: #E27D85
+}
+.skill_buttom:hover
+,.close_modal:hover
+,.close_modalWordpress:hover{
+    background-color: var(--main-body-color);
 }
 .skill_content{
     display: flex;
@@ -351,6 +365,171 @@ nav{
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-10px); }
 }
+.modal_frontend,
+.modal_Wordpress,
+.modal_DataAnalyst,
+.modal_Pyton{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #111111bd;
+    display: flex;
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+}
+.modalFrontend--show{
+    opacity: 1;
+    pointer-events: unset;
+}
+.modal_container{
+    margin: auto;
+    width: 90%;
+    max-width: 700px;
+    max-height: 90%;
+    border-radius: 10px;
+    padding: 3em 2.5em;
+}
+
+.modal_containerFrontend {
+    background-color: #eabcc6;
+    display: grid;
+    gap: 1em;
+    place-items: center;
+    grid-auto-columns: 100%;
+}
+.modal_containerWordpress{
+    background-color: #b4cfd0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow: auto;
+}
+.modal_containerDataAnalyst{
+    background-color: #f9d9b4;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow: auto;
+}
+.modal_containerPyton{
+    background-color: #fcfcfc;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow: auto;
+}
+
+
+.modal_projectOne
+,.modal_projectTwo
+,.modal_projectThree
+,.modal_projectFour {
+    display: grid;
+    grid-template-columns: 1fr ;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    width: 100%;
+    align-items: center;
+}
+
+.tittle_projectTwo
+,.tittle_projectThree
+,.projectThree_info
+,.tittle_projectFour{
+    text-align: center;
+    font-size: 1em;
+    margin: 1em;
+}
+
+
+.img_projectOne {
+    width: 100%;
+    max-width: 250px;
+    display: block;
+    margin: auto;
+    border-radius: 10px;
+}
+.img_projectTwo
+{
+    height: 8em;
+    width: auto;
+    padding: 0.5em;
+    border-radius: 10px;
+    transition: transform 0.2s ease-in-out;
+}
+.img_projectFour{
+    height: 10em;
+    width: auto;
+    padding:1em;
+    border-radius: 10px;
+    transition: transform 0.2s ease-in-out;
+}
+.img_projectTwo:hover{
+    transform: scale(1.2); 
+    cursor: pointer;
+}
+
+.project_details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width:  auto;
+
+}
+.project_details
+,.modal_projectTwo
+,.modal_projectThree
+,.modal_projectFour{
+    background-color: #f7f0f08f;
+    border-radius: 10px;
+    margin: 1em;
+    padding: 0 1em;
+}
+.modal_projectFour{
+    background-color: #9491918e;
+    padding: 1em;
+}
+.project_icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+.logo_project {
+    width: 50px;
+    height: auto;
+}
+
+.aLogo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.img_containerTwo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.img_containerFour{
+    display: flex ;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.img_desc{
+    font-style: italic;
+    font-size: 1em;
+    margin: 0 1em;
+}
+
+
 .footer {
     position: relative;
     bottom: 0;
@@ -359,10 +538,18 @@ nav{
     text-align: center;
     background: linear-gradient(to top, var(--main-body-color) , var(--main-thirt-color) );
 }
-
-.footer__text {
+.modalWordpress--show{
+    opacity: 1;
+    pointer-events: unset;
 }
-
+.modalDataAnalyst--show{
+    opacity: 1;
+    pointer-events: unset;
+}
+.modalPython--show{
+    opacity: 1;
+    pointer-events: unset;
+}
 
 @media (min-width: 601px) and (max-width: 1024px) {
     body{
@@ -370,7 +557,8 @@ nav{
         padding: 2px;
     }
     .main{
-        padding: 30em 2em 30em 2em;
+        padding: 5em;
+        overflow: auto;
     }
     nav{
         display: flex;
@@ -382,77 +570,153 @@ nav{
         width: 100%;
         position: fixed;
         top: 0;
+        height: 5em;
         background: linear-gradient(to top,var(--main-body-color ),var(--main-thirt-color ));
     }
-    
-    .header__nav a{
-        text-decoration: none;
-        margin: 100%;
+    .about__aside ul {
+        display: block;     
+    }
+    .navIco{
+        padding-top: 10px;
+        height: 4em;
+        width: auto;
+        gap: 0;
+    }
+    .header__nav-list{
+        display: flex;
         align-items: center;
-    
+        justify-content: space-around;
+        padding: 0 1em 0 1em;
     }
-    .header__nav li{
+    .header__nav-list a{
+        text-decoration: none;
+    }
+    .header__nav ul li{
         list-style: none;
-        margin: 0 9% 0 4%;
     }
-    .header__link{
-        font-size:1.5em;
-    }
-    .header__link:hover{
-        color:rgba(244, 46, 231, 0.5);
+    .header__nav-item{
+        display: flex;
+        justify-content: end;
+        flex-direction: row;
     }
     .about__aside{
         display: none;
     }
     .image-media{
         display: flex;
-        box-shadow: 10px 10px 30px var(--main-body-color);
+        height: 30em;
+        margin-bottom: 15%;
     }
-
-    .intro__content,
-    .about__content,
-    .projects__content,
-    .contact__content {
-        overflow: hidden;
-        width: 100%;
-        display: block;
-        margin: 1em 0;
-        height: auto;
-    }
-
-    
-    .intro__content{
+    .dynamic-content{
         align-items: center;
-        flex-direction:column;
+    }
+    .intro__content
+    ,.projects__content
+    ,.contact__content{
+        height: 100%;
+        width: 100%;
+        align-items: center;
+        border-radius: 18px ;
+    }
+    .intro__greeting
+    ,.intro__title
+    ,.intro__specialization{
+        margin: 0.2em;
     }
     .intro__description{
-        width: 100%;
+        font-size: 1.5em;
     }
-    .intro__buttom{
-        display:flex;
-        flex-direction: column;
-        padding: 0;
-        margin: 0%;
+    .container_slide
+    , .contact__information
+    {
+        height: 65em;
+        padding: 2em;
     }
-    .intro__link{
-        width: 100%;
+    .slide_list{
+        height: 90%;
     }
-    .intro__logo_github
-    ,.intro__logo_linkedin{
-    width: 2.5em;
+    .contact__icon{
+        display: grid;
+        grid-template-columns: repeat(2, 9em);
+        grid-template-rows: repeat(3, 10em);
+        gap: 8em;
+        justify-content: center;
+        padding: 9em 0;
     }
-    .intro__greeting{
-        padding: 25px;
+    .contact_ico{
+        width: 9.5em;
+        border-radius: 30px;
     }
-    .intro__link{
-        height: 2em;
+    
+    .ico_one{
+        grid-row: 1;
+        grid-column: 1;
     }
-
-    .footer__text {
+    .ico_two{
+        grid-row: 2;
+        grid-column: 1;
     }
-
+    .ico_three{
+        grid-row: 3;
+        grid-column: 1;
+    }
+    .ico_four{
+        grid-row: 1;
+        grid-column: 2;
+    }
+    .ico_five{
+        grid-row: 2;
+        grid-column: 2;
+    }
+    .ico_six{
+        grid-row: 3;
+        grid-column: 2;
+    }
 
 }
 
 
-
+@media (min-width: 1920px){
+    .intro__content
+    ,.projects__content
+    ,.contact__content{
+        height: 100%;
+        width: 150%;
+        align-items: center;
+        border-radius: 18px ;
+    }
+    .about__aside{
+        width: 20em;
+    }
+    .about__aside-img
+    ,.image-media
+    {
+    width: auto;
+    height: 30em;
+    }
+    .link
+    ,.intro__description
+    ,.intro__specialization
+    ,.intro__title
+    ,.intro__greeting
+    ,.skill_content
+    ,.skill_name
+    {
+    font-size: 1em;
+    }
+    .skill_buttom{
+        font-size: 1em;
+    }
+    .intro__logo_github
+    ,.intro__logo_linkedin{
+    width: 8em; 
+    }
+    .slide_list{
+        height: 50em;
+    }
+    .contact__icon{
+        padding: 10em 0;
+        gap: 4em;
+    }
+    
+}

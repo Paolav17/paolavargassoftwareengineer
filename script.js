@@ -107,12 +107,74 @@ document.addEventListener ('DOMContentLoaded',function(){
                     } else if (entry.target.id === "contact") {
                         document.querySelector(".contact__link").style.color = "#111";
                     }
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("show");
+                    }
                 }
             });
         },
         { threshold: 0.2 } 
     );
     section.forEach((section) => observer.observe(section));
+    //modalFrontend
+    const openModalFrontend = document.querySelector('.frontend_buttom');
+    const modalFrontend = document.querySelector('.modal_frontend')
+    const closeModalFrontend = document.querySelector('.close_modal')
+
+    openModalFrontend.addEventListener('click', (e)=>{
+        e.preventDefault();
+        modalFrontend.classList.add('modalFrontend--show')
+        console.log(modalFrontend)
+    });
+    closeModalFrontend.addEventListener('click', (e)=>{
+        e.preventDefault();
+        modalFrontend.classList.remove('modalFrontend--show')
+        console.log(modalFrontend)
+    });
+    //modalWordpress
+    const openModalWordpress = document.querySelector('.wordpress_buttom');
+    const modalWordpress = document.querySelector('.modal_Wordpress')
+    const closeModalWordpress = document.querySelector('.close_modalWordpress')
+
+    openModalWordpress.addEventListener('click', (e)=>{
+        e.preventDefault();
+        modalWordpress.classList.add('modalWordpress--show')
+        console.log(modalWordpress)
+    });
+    closeModalWordpress.addEventListener('click', (e)=>{
+        e.preventDefault();
+        modalWordpress.classList.remove('modalWordpress--show')
+        console.log(modalWordpress)
+    });
+        //modalDataAnalyst
+        const openModalDataAnalyst = document.querySelector('.DataAnalyst_buttom');
+        const modalDataAnalyst = document.querySelector('.modal_DataAnalyst')
+        const closeModalDataAnalyst = document.querySelector('.close_modalDataAnalyst')
     
+        openModalDataAnalyst.addEventListener('click', (e)=>{
+            e.preventDefault();
+            modalDataAnalyst.classList.add('modalDataAnalyst--show')
+            console.log(modalDataAnalyst)
+        });
+        closeModalDataAnalyst.addEventListener('click', (e)=>{
+            e.preventDefault();
+            modalDataAnalyst.classList.remove('modalDataAnalyst--show')
+            console.log(modalDataAnalyst)
+        });
+        //modalPython
+        const openModalPython = document.querySelector('.Python_buttom');
+        const modalPython = document.querySelector('.modal_Pyton')
+        const closeModalPython = document.querySelector('.close_modalPython')
+    
+        openModalPython.addEventListener('click', (e)=>{
+            e.preventDefault();
+            modalPython.classList.add('modalPython--show')
+            console.log(modalPython)
+        });
+        closeModalPython.addEventListener('click', (e)=>{
+            e.preventDefault();
+            modalPython.classList.remove('modalPython--show')
+            console.log(modalPython)
+        });
 } )
 

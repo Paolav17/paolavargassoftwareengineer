@@ -553,12 +553,9 @@ nav{
 
 @media (min-width: 601px) and (max-width: 1024px) {
     body{
-        overflow:scroll;
-        padding: 2px;
+        /* padding: 2px; */
     }
     .main{
-        padding: 5em;
-        overflow: auto;
     }
     nav{
         display: flex;
@@ -613,10 +610,14 @@ nav{
     .intro__content
     ,.projects__content
     ,.contact__content{
-        height: 100%;
+        height: auto;
+        /* max-height: 4px; */
         width: 100%;
         align-items: center;
         border-radius: 18px ;
+    }
+    .intro__info{
+        max-height: 100vh;
     }
     .intro__greeting
     ,.intro__title
@@ -677,22 +678,33 @@ nav{
 
 
 @media (min-width: 1920px){
+    body{
+        font-size: 1em;
+    }
     .intro__content
     ,.projects__content
     ,.contact__content{
-        height: 100%;
-        width: 150%;
+        height: auto;
+        max-height: 55em;
+        width: 200%;
         align-items: center;
         border-radius: 18px ;
+        padding: 20px;
     }
+
     .about__aside{
-        width: 20em;
+        width: 30%;
     }
     .about__aside-img
     ,.image-media
     {
     width: auto;
-    height: 30em;
+    height: auto;
+    max-width: 30em;
+    max-height: 20em;
+    }
+    .intro__info{
+        gap: 2em;
     }
     .link
     ,.intro__description
@@ -702,7 +714,7 @@ nav{
     ,.skill_content
     ,.skill_name
     {
-    font-size: 1em;
+    font-size: 1.5em;
     }
     .skill_buttom{
         font-size: 1em;
@@ -715,8 +727,20 @@ nav{
         height: 50em;
     }
     .contact__icon{
-        padding: 10em 0;
+        display: grid;
+        grid-template-columns: repeat(2, 15em);
+        grid-template-rows: repeat(1fr 1fr 1fr);
         gap: 4em;
+        align-items: center;
+        align-self: center;
     }
+    .contact__icon{
+        padding: 10em 0;
+        gap: 3em;
+        width: auto;
+
+    }
+    
+
     
 }

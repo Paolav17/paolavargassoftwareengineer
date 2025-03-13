@@ -237,16 +237,16 @@ nav{
     width: 70%;
 }
 .frontend{
-    background-image: url(/sources/img/logofrontend.png);
+    background-image: url(sources/img/logofrontend.png);
 }
 .wordpress{
-    background-image: url(/sources/img/logowordpress.png);
+    background-image: url(sources/img/logowordpress.png);
 }
 .dataAnalyst{
-    background-image: url(/sources/img/logodataanalyst.png);
+    background-image: url(sources/img/logodataanalyst.png);
 }
 .python{
-    background-image: url(/sources/img/logopython.png);
+    background-image: url(sources/img/logopython.png);
 }
 
 .projects__information{

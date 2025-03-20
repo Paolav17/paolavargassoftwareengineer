@@ -45,11 +45,12 @@ nav{
 }
 
 .main {
-    padding: 0.2em 5em 0 10em;
-    height: 96.5vh;
     display: flex;
-    align-items: center;
-    margin: 0 auto;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+    text-align: center; /
 }
 
 .dynamic-content {
@@ -247,10 +248,10 @@ nav{
     background-image: url(sources/img/logowordpress.png);
 }
 .dataAnalyst{
-    background-image: url(sources/img/logodataanalyst.png);
+    background-image: url(/sources/img/dataanalyst.png);
 }
 .python{
-    background-image: url(sources/img/logopython.png);
+    background-image: url(sources/img/python.png);
 }
 
 .projects__information{
@@ -598,8 +599,13 @@ nav{
 @media (max-width: 1024px) {
     body{
         font-size: small;
+        justify-content: center;
     }
     .main{
+        width: 100%;
+        align-self: center;
+        justify-content: center;
+        
     }
     nav{
         display: flex;
@@ -646,6 +652,7 @@ nav{
     }
     .image-media{
         display:block;
+         
     }
     .dynamic-content{
         align-items: center;
@@ -653,14 +660,14 @@ nav{
     .intro__content
     ,.projects__content
     ,.contact__content{
-        height: auto;
-        margin-top: 8em;
-        /* max-height: 4px; */
-        width: 100%;
-        align-items: center;
-        border-radius: 18px ;
+        width: 110%; 
+        min-height: 70vh; 
+        padding: 3em; 
+        margin: auto; 
+        text-align: center; 
         overflow: auto;
-        margin: 5em 0;
+        border-radius: 18px;
+        align-content: space-around;
     }
     .intro__info{
         max-height: 100vh;
@@ -727,29 +734,32 @@ nav{
 @media (min-width: 1920px){
     body{
         font-size: 0.8em;
-        align-items: center;
+        
+    }
+    .main{
+       width:100%; 
     }
     .intro__content
     ,.projects__content
     ,.contact__content{
         height: auto;
         max-height: 55em;
-        width: 200%;
+        width: 150%;
+        align-self: center;
         align-items: center;
-        border-radius: 18px ;
-        padding: 20px;
+        border-radius:0 18px 18px 0 ;
     }
 
     .about__aside{
-        width: 30%;
+        
     }
     .about__aside-img
     ,.image-media
     {
-    width: auto;
-    height: auto;
-    max-width: 30em;
-    max-height: 20em;
+        width: auto;
+        height: auto;
+        max-width: 30em;
+        max-height: 20em;
     }
     .intro__info{
         gap: 2em;
@@ -762,14 +772,14 @@ nav{
     ,.skill_content
     ,.skill_name
     {
-    font-size: 1.5em;
+        font-size: 1.5em;
     }
     .skill_buttom{
         font-size: 1em;
     }
     .intro__logo_github
     ,.intro__logo_linkedin{
-    width: 8em; 
+        width: 8em; 
     }
     .slide_list{
         height: 50em;
